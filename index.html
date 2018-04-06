@@ -4,6 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script>
 
 </head>
 
@@ -11,7 +12,7 @@
 
     <h2>Login Form</h2>
 
-    <form action="/action_page.php">
+    <form action="#" method="post" onsubmit="return validate()">
         <div class="imgcontainer">
             <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Aakriti" class="avatar">
         </div>
@@ -20,14 +21,15 @@
             <label for="uname">
                 <b>Username</b>
             </label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
 
             <label for="psw">
                 <b>Password</b>
             </label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit">Login</button>
+            <input id="submit" type="submit" value="Login"  />
+            <!-- <button id="submit" type="submit" onclick="validate()">Login</button> -->
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
